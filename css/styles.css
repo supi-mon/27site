@@ -1,0 +1,130 @@
+/* variables */
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-consolata: "Inconsolata", monospace;
+}
+
+/* global styles */
+.ts-temp-background {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  position: absolute;
+  color: white;
+  background-color: #66a3ff;
+
+  background-image: repeating-linear-gradient(
+      transparent,
+      transparent 50px,
+      purple 50px,
+      purple 53px,
+      transparent 53px,
+      transparent 63px,
+      purple 63px,
+      purple 66px,
+      transparent 66px,
+      transparent 116px,
+      rgba(0, 0, 0, 0.5) 116px,
+      rgba(0, 0, 0, 0.5) 166px,
+      rgba(255, 255, 255, 0.2) 166px,
+      rgba(255, 255, 255, 0.2) 169px,
+      rgba(0, 0, 0, 0.5) 169px,
+      rgba(0, 0, 0, 0.5) 179px,
+      rgba(255, 255, 255, 0.2) 179px,
+      rgba(255, 255, 255, 0.2) 182px,
+      rgba(0, 0, 0, 0.5) 182px,
+      rgba(0, 0, 0, 0.5) 232px,
+      transparent 232px
+    ),
+    repeating-linear-gradient(
+      270deg,
+      transparent,
+      transparent 50px,
+      purple 50px,
+      purple 53px,
+      transparent 53px,
+      transparent 63px,
+      purple 63px,
+      purple 66px,
+      transparent 66px,
+      transparent 116px,
+      rgba(0, 0, 0, 0.5) 116px,
+      rgba(0, 0, 0, 0.5) 166px,
+      rgba(255, 255, 255, 0.2) 166px,
+      rgba(255, 255, 255, 0.2) 169px,
+      rgba(0, 0, 0, 0.5) 169px,
+      rgba(0, 0, 0, 0.5) 179px,
+      rgba(255, 255, 255, 0.2) 179px,
+      rgba(255, 255, 255, 0.2) 182px,
+      rgba(0, 0, 0, 0.5) 182px,
+      rgba(0, 0, 0, 0.5) 232px,
+      transparent 232px
+    );
+}
+body {
+  font-family: var(--font-inter);
+}
+/* end of global styles */
+
+/* bootstrap style overrides */
+.navbar {
+  padding: 25px 0px 0px 0px;
+}
+.navbar-brand {
+  font-weight: 800;
+}
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+.navbar-toggler,
+.navbar-toggler:focus {
+  border: none;
+  transition: none;
+  box-shadow: none;
+  padding-right: 0px;
+}
+/* end of bootstrap style overrides*/
+
+@media (max-width: 991px) {
+  .ts-org-header__menu {
+    border-bottom: 1px solid lightgrey;
+    margin-left: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .ts-org-header__menu {
+    margin-right: 30px;
+  }
+}
+
+.ts-atom-logo {
+  width: 50px;
+}
+.ts-org-header__logo {
+  margin-right: 10px;
+}
+@media (max-width: 991px) {
+  .ts-molc-menu {
+    margin-left: auto !important;
+    width: 420px;
+    padding-right: 20px;
+    box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.15) !important;
+    border-radius: 12px !important;
+  }
+  .ts-molc-menu__ul {
+    text-align: right !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .ts-molc-menu {
+    width: 220px;
+  }
+}
