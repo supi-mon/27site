@@ -10,6 +10,13 @@ body {
   font-family: var(--font-inter);
   background-color: transparent;
 }
+.opacity-50 {
+  opacity: 0.5;
+}
+.list-group-horizontal li {
+  list-style-type: none;
+  padding: 0px 20px;
+}
 /* background animation */
 .ts-temp-background {
   top: 0px;
@@ -177,6 +184,7 @@ body {
 }
 .ts-org-header__logo {
   margin-right: 10px;
+  margin-left: 3px;
 }
 .ts-molc-menu {
   background-color: white;
@@ -279,17 +287,20 @@ body {
   font-size: 19px;
   line-height: 29.6px;
 }
+.ts-atom-lead-ht-yellow {
+  font-family: var(--font-consolata);
+  font-size: 19px;
+  background-color: rgba(253, 255, 144, 0.8);
+}
 @media (min-width: 992px) {
   .ts-atom-lead {
     font-size: 22px;
     line-height: 32.8px;
     letter-spacing: -0.15px;
   }
-}
-.ts-atom-lead-ht-yellow {
-  font-family: var(--font-consolata);
-  font-size: 24px;
-  background-color: rgba(253, 255, 144, 0.8);
+  .ts-atom-lead-ht-yellow {
+    font-size: 24px;
+  }
 }
 .ts-atom-micdrop-svg {
   width: 228px;
@@ -395,14 +406,18 @@ body {
 }
 .ts-atom-intropara {
   letter-spacing: -0.15px;
-  padding: 0px 6vw;
   font-size: 18px;
   line-height: 29px;
+}
+.ts-atom-intropara--px {
+  padding: 0px 6vw;
 }
 @media (min-width: 992px) {
   .ts-atom-intropara {
     font-size: 21px;
     line-height: 32px;
+  }
+  .ts-atom-intropara--px {
     padding: 0px 18vw;
   }
 }
@@ -464,6 +479,11 @@ body {
 .ts-atom-service-icon {
   width: 80px;
 }
+.ts-atom-case-icon {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  width: 30px;
+}
 @media (min-width: 768px) {
   .ts-atom-service-icon {
     width: 100px;
@@ -514,24 +534,31 @@ body {
     line-height: 28.05px;
   }
 }
-.ts-molc-footer-service {
-  margin: 0px 0px 0px 0px;
-  width: 46vw;
-  padding: 0px 18px;
+.ts-molc-footer-service__clients {
+  max-width: 200px;
+  width: 100%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 0.5;
 }
 .ts-org-footer__footer-services {
   margin-top: 60px;
+}
+@media (max-width: 575px) {
+  .ts-molc-footer-service__clients {
+    margin-bottom: 3rem;
+  }
 }
 @media (min-width: 576px) {
   .ts-atom-footer-icon {
     width: 110px;
   }
   .ts-molc-footer-service {
-    margin: 0 5vw;
-    width: auto;
+    flex: 1;
+    text-align: center;
   }
   .ts-org-footer__footer-services {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 }
 
@@ -545,4 +572,8 @@ body {
 }
 .ts-atom-contact-btn--blue {
   background-color: #0057cc;
+}
+.ts-atom-footer-link {
+  text-decoration: none;
+  color: white;
 }
