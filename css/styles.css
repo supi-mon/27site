@@ -590,3 +590,14 @@ a {
 .ts-molc-modal__modal {
   background-color: #fdec53;
 }
+.ts-atom-thankyou {
+  height: 0px;
+  overflow: hidden;
+  transition: height 1s;
+}
+.ts-atom-thankyou--show {
+  height: 70px;
+}
+.ts-org-about {
+  background-color: #fdec53;
+}

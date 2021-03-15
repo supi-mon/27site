@@ -977,7 +977,7 @@
             </p>
             <br />
             <b class="ts-atom-intropara">Or Tell us more:</b><br /><br />
-            <form>
+            <form id="ts-contact-form">
               <div class="mb-3">
                 <label for="user-email" class="form-label ts-atom-intropara"
                   >Email address</label
@@ -1008,11 +1008,18 @@
               </div>
               <br />
               <button
+                id="contact-submit-btn"
                 type="submit"
                 class="btn btn-primary ts-atom-contact-btn ts-atom-contact-btn--blue"
               >
                 Submit
               </button>
+              <div class="ts-atom-thankyou">
+                <br /><b
+                  >Thank you for reaching out to us. We shall get back to you
+                  shortly!</b
+                >
+              </div>
             </form>
           </div>
         </div>
@@ -1024,5 +1031,37 @@
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
+    <script>
+      window.onload = (event) => {
+        const btn = document.getElementById("contact-submit-btn");
+        const thankyou = document.getElementsByClassName("ts-atom-thankyou")[0];
+        const form = document.getElementById("ts-contact-form");
+        const useremail = document.getElementById("user-email");
+        const details = document.getElementById("validationTextarea");
+        const tsModal = document.getElementById("ts-modal");
+        // clear form when closing modal
+        tsModal.addEventListener("hide.bs.modal", function (event) {
+          thankyou.classList.remove("ts-atom-thankyou--show");
+          useremail.value = "";
+          details.value = "";
+        });
+        // form submission
+        btn.addEventListener("click", (e) => {
+          if (form.checkValidity()) {
+            e.preventDefault();
+            btn.disabled = true;
+            setTimeout(() => {
+              thankyou.classList.add("ts-atom-thankyou--show");
+              btn.disabled = false;
+              useremail.value = "";
+              details.value = "";
+              setTimeout(() => {
+                thankyou.classList.remove("ts-atom-thankyou--show");
+              }, 3000);
+            }, 1000);
+          }
+        });
+      };
+    </script>
   </body>
 </html>
