@@ -10,12 +10,21 @@ body {
   font-family: var(--font-inter);
   background-color: transparent;
 }
+a {
+  text-decoration: none;
+}
 .opacity-50 {
   opacity: 0.5;
 }
 .list-group-horizontal li {
   list-style-type: none;
   padding: 0px 20px;
+}
+.modal-header {
+  border: none;
+}
+.form-text {
+  color: #9d9127;
 }
 /* background animation */
 .ts-temp-background {
@@ -450,6 +459,7 @@ body {
   /* box-shadow: inset 0px 0px 144px 10px rgba(157, 227, 225, 1); */
   box-shadow: inset 0px 0px 151px -59px rgba(157, 227, 225, 1);
   text-align: center;
+  height: 100%;
 }
 @media (min-width: 992px) {
   .ts-molc-service {
@@ -576,4 +586,7 @@ body {
 .ts-atom-footer-link {
   text-decoration: none;
   color: white;
+}
+.ts-molc-modal__modal {
+  background-color: #fdec53;
 }
