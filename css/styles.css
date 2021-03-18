@@ -10,6 +10,10 @@ body {
   font-family: var(--font-inter);
   background-color: transparent;
 }
+:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
 a {
   text-decoration: none;
 }
@@ -25,6 +29,10 @@ a {
 }
 .form-text {
   color: #9d9127;
+}
+.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: #d0ecf8;
 }
 /* background animation */
 .ts-temp-background {
